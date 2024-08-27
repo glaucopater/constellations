@@ -1,49 +1,35 @@
-import React from 'react';
+import { ConstellationProps } from './Constellation.types';
 
-import { Constellation, Star } from './Constellation.types';
-
-interface StarProps {
-  star: Star;
-}
-
-const StarComponent: React.FC<StarProps> = ({ star }) => {
+const Constellation = (data: ConstellationProps) => {
   return (
-    <div
-      style={{
-        position: 'absolute',
-        left: `${star.x}%`, // You can adjust these percentage values based on your layout
-        top: `${star.y}%`,
-        transform: 'translate(-50%, -50%)', // To center the star on its position
-        width: '5px',
-        height: '5px',
-        borderRadius: '50%',
-        backgroundColor: 'yellow', // or any other color representing the star
-      }}
-    />
-  );
-};
-
-interface ConstellationProps {
-  constellation: Constellation;
-}
-
-const ConstellationComponent: React.FC<ConstellationProps> = ({ constellation }) => {
-  return (
-    <div
-      style={{
-        position: 'relative',
-        width: '200px',
-        height: '200px',
-        border: '1px solid red',
-        background: 'black',
-        margin: 8,
-      }}
-    >
-      {constellation.stars.map((star, index) => (
-        <StarComponent key={index} star={star} />
+    <svg width="300" height="300" style={{ backgroundColor: 'black' }}>
+      {/* Draw Lines */}
+      {data.lines.map((line, index) => {
+        const startStar = data.stars[line.start - 1];
+        const endStar = data.stars[line.end - 1];
+        return (
+          <line
+            key={index}
+            x1={startStar.x}
+            y1={startStar.y}
+            x2={endStar.x}
+            y2={endStar.y}
+            stroke="white"
+            strokeWidth="1"
+          />
+        );
+      })}
+      {/* Draw Stars and Names */}
+      {data.stars.map((star, index) => (
+        <g key={index}>
+          <circle cx={star.x} cy={star.y} r="2" fill="white" />
+          <text x={star.x + 3} y={star.y - 3} fill="cyan" fontSize="6">
+            {star.name}
+          </text>
+        </g>
       ))}
-    </div>
+    </svg>
   );
 };
 
-export default ConstellationComponent;
+export default Constellation;

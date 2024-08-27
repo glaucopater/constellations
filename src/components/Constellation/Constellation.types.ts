@@ -4,7 +4,8 @@ export interface Star {
   y: number;
 }
 
-export interface Constellation {
+export interface ConstellationProps {
   name: string;
   stars: Star[];
+  lines: { start: number; end: number }[];
 }

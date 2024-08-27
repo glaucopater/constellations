@@ -1,87 +1,54 @@
 export default {
   zodiacConstellations: [
     {
-      name: 'Aries',
+      name: 'Centaurus',
       stars: [
-        { name: 'Hamal', x: 10, y: 30 },
-        { name: 'Sheratan', x: 20, y: 40 },
-        { name: 'Mesarthim', x: 25, y: 35 },
+        { name: 'S1', x: 72.6, y: 191.5 },
+        { name: 'S2', x: 98, y: 180.6 },
+        { name: 'S3', x: 67.3, y: 42.5 },
+        { name: 'S4', x: 163.4, y: 108.1 },
+        { name: 'S5', x: 110.8, y: 136 },
+        { name: 'S6', x: 44, y: 83 },
+        { name: 'S7', x: 91.1, y: 102.3 },
+        { name: 'S8', x: 193.4, y: 121.4 },
+        { name: 'S9', x: 121.5, y: 36.6 },
+        { name: 'S10', x: 92.6, y: 73.4 },
+        { name: 'S11', x: 19.7, y: 90.4 },
+        { name: 'S12', x: 92, y: 68.5 },
+        { name: 'S13', x: 83, y: 72.3 },
+        { name: 'S14', x: 229.5, y: 151.6 },
+        { name: 'S15', x: 110.7, y: 52.6 },
+        { name: 'S16', x: 175.6, y: 115.4 },
+        { name: 'S17', x: 189, y: 129.6 },
+        { name: 'S18', x: 53.4, y: 53.5 },
+        { name: 'S19', x: 73.7, y: 68.4 },
+        { name: 'S20', x: 193.7, y: 120 },
+        { name: 'S21', x: 168.3, y: 54.7 },
+        { name: 'S22', x: 209.5, y: 171.6 },
       ],
-    },
-    {
-      name: 'Taurus',
-      stars: [
-        { name: 'Aldebaran', x: 80, y: 50 },
-        { name: 'Elnath', x: 90, y: 40 },
-        { name: 'Ain', x: 85, y: 45 },
-      ],
-    },
-    {
-      name: 'Gemini',
-      stars: [
-        { name: 'Castor', x: 40, y: 70 },
-        { name: 'Pollux', x: 50, y: 80 },
-      ],
-    },
-    {
-      name: 'Cancer',
-      stars: [
-        { name: 'Acubens', x: 30, y: 20 },
-        { name: 'Al Tarf', x: 25, y: 15 },
-        { name: 'Al Zubanah', x: 35, y: 10 },
-      ],
-    },
-    {
-      name: 'Leo',
-      stars: [
-        { name: 'Regulus', x: 70, y: 30 },
-        { name: 'Denebola', x: 80, y: 40 },
-      ],
-    },
-    {
-      name: 'Virgo',
-      stars: [{ name: 'Spica', x: 55, y: 60 }],
-    },
-    {
-      name: 'Libra',
-      stars: [
-        { name: 'Zubenelgenubi', x: 45, y: 45 },
-        { name: 'Zubeneschamali', x: 55, y: 55 },
-      ],
-    },
-    {
-      name: 'Scorpio',
-      stars: [
-        { name: 'Antares', x: 30, y: 70 },
-        { name: 'Dschubba', x: 40, y: 80 },
-      ],
-    },
-    {
-      name: 'Sagittarius',
-      stars: [
-        { name: 'Kaus Australis', x: 60, y: 85 },
-        { name: 'Ascella', x: 70, y: 75 },
-      ],
-    },
-    {
-      name: 'Capricorn',
-      stars: [
-        { name: 'Deneb Algedi', x: 10, y: 55 },
-        { name: 'Nashira', x: 20, y: 45 },
-      ],
-    },
-    {
-      name: 'Aquarius',
-      stars: [
-        { name: 'Sadalsuud', x: 50, y: 15 },
-        { name: 'Skat', x: 60, y: 25 },
-      ],
-    },
-    {
-      name: 'Pisces',
-      stars: [
-        { name: 'Alpherg', x: 30, y: 60 },
-        { name: 'Fumalsamakah', x: 40, y: 70 },
+
+      lines: [
+        { start: 2, end: 1 },
+        { start: 4, end: 5 },
+        { start: 5, end: 2 },
+        { start: 3, end: 18 },
+        { start: 6, end: 13 },
+        { start: 19, end: 13 },
+        { start: 6, end: 11 },
+        { start: 7, end: 4 },
+        { start: 7, end: 5 },
+        { start: 9, end: 15 },
+        { start: 10, end: 7 },
+        { start: 12, end: 15 },
+        { start: 13, end: 7 },
+        { start: 16, end: 4 },
+        { start: 16, end: 17 },
+        { start: 16, end: 20 },
+        { start: 18, end: 19 },
+        { start: 8, end: 14 },
+        { start: 21, end: 9 },
+        { start: 22, end: 17 },
+        { start: 3, end: 10 },
       ],
     },
   ],

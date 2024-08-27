@@ -12,12 +12,13 @@ import sagittarius from './assets/svg/sagittarius.svg';
 import scorpio from './assets/svg/scorpio.svg';
 import taurus from './assets/svg/taurus.svg';
 import virgo from './assets/svg/virgo.svg';
-import ConstellationComponent from './components/Constellation';
-import { Constellation } from './components/Constellation/Constellation.types';
+import Constellation from './components/Constellation';
+import { ConstellationProps } from './components/Constellation/Constellation.types';
+import { Slider } from './components/Slider';
 import data from './data';
 
 function App() {
-  const zodiacConstellations: Constellation[] = data.zodiacConstellations;
+  const zodiacConstellations: ConstellationProps[] = data.zodiacConstellations;
 
   return (
     <div className="App">
@@ -25,13 +26,15 @@ function App() {
         <div className="body">
           <div
             style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              position: 'relative',
-              width: '100%',
-              height: '100vh',
+              border: '1px solid #ccc',
+              padding: '8px',
             }}
           >
+            {zodiacConstellations.map((constellation, index) => (
+              <Constellation key={index} {...constellation} />
+            ))}
+          </div>
+          <Slider>
             <img src={aries} alt="aries" className="constellation" />
             <img src={taurus} alt="taurus" className="constellation" />
             <img src={gemini} alt="gemini" className="constellation" />
@@ -44,10 +47,7 @@ function App() {
             <img src={capricorn} alt="capricorn" className="constellation" />
             <img src={aquarius} alt="aquarius" className="constellation" />
             <img src={pisces} alt="pisces" className="constellation" />
-            {zodiacConstellations.map((constellation, index) => (
-              <ConstellationComponent key={index} constellation={constellation} />
-            ))}
-          </div>
+          </Slider>
         </div>
       </header>
     </div>
